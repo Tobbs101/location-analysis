@@ -10,11 +10,11 @@ const PageLayout = ({
   title: string;
 }) => {
   return (
-    <main className="w-full p-10 bg-white min-h-screen text-black">
+    <main className="w-full py-5 px-10 bg-white min-h-screen text-black">
       <Header />
-      <div className="text-black py-7 flex items-center justify-between">
+      <div className="text-black py-7 flex items-center justify-between gap-10 flex-wrap">
         <p className="text-[24px] font-semibold">{title}</p>
-        <div className="flex items-center justify-center flex-col">
+        <div className="flex items-start justify-center md:items-center flex-col">
           <p className="text-[18px] font-[500]">Underwriting Model</p>
           <span className="mt-2 text-[14px] font-medium border border-[#F4F4F5CC] bg-[#F4F4F5CC] px-4 py-2 flex items-center justify-center gap-1">
             Industrial.Template.v2.4.xlsx
