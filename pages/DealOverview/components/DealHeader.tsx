@@ -1,14 +1,55 @@
+"use client";
+
 import React from "react";
 import Dummy_Deal_Image from "@/assets/Dummy_Deal_Image.png";
 import Image from "next/image";
 import { DollarSign, Hammer, PersonStanding, Ruler, Scan } from "lucide-react";
 import Each from "@/components/misc/Each";
+import { exportToCSV } from "@/lib/utils";
 
 type DealDataItemProps = {
   id: number;
-  title: React.ReactNode;
+  title: React.ReactNode | string;
   content: string;
 };
+
+const csvData: DealDataItemProps[] = [
+  {
+    id: 1,
+    title: "Seller",
+    content: "Thor Equities",
+  },
+  {
+    id: 2,
+    title: "Guidance Price",
+    content: "$143,000,000",
+  },
+  {
+    id: 3,
+    title: "Guidance Price PSF",
+    content: "$23.92",
+  },
+  {
+    id: 4,
+    title: "Car Rate",
+    content: "5.0%",
+  },
+  {
+    id: 5,
+    title: "Property Size",
+    content: "312,000 sqft",
+  },
+  {
+    id: 6,
+    title: "Line Area",
+    content: "16 acres",
+  },
+  {
+    id: 7,
+    title: "Zoning",
+    content: "M-2",
+  },
+];
 
 const DealHeader = () => {
   const dealData: DealDataItemProps[] = [
@@ -82,6 +123,11 @@ const DealHeader = () => {
       content: "M-2",
     },
   ];
+
+  const handleExportToExcel = () => {
+    exportToCSV(csvData, "Deal Metrics");
+  };
+
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-5 md:gap-10">
@@ -105,10 +151,13 @@ const DealHeader = () => {
               <p className="text-[14px] font-[400] text-[#71717A]">Warehouse</p>
             </div>
             <div className="flex items-center gap-3 justify-center flex-col">
-              <button className="py-1 text-xs font-medium rounded-md px-5 text-white bg-black">
+              <button
+                onClick={handleExportToExcel}
+                className="py-1 text-xs font-medium rounded-md px-5 text-white bg-black"
+              >
                 Export to Excel
               </button>
-              <button className="py-1 text-xs font-medium rounded-md px-1 text-white bg-black">
+              <button className="py-1 cursor-not-allowed text-xs font-medium rounded-md px-1 text-white bg-black">
                 Generate PowerPoint
               </button>
             </div>
