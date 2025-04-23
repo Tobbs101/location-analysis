@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Assessment for Starboard AI
 
-## Getting Started
+This is the frontend project developed for Starboard AI's assessment. It leverages Next.js and TypeScript for a robust and maintainable codebase and Tailwind CSS for rapid styling. Lucide React is used for icons.
 
-First, run the development server:
+## Included Technologies
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js:** A React framework for building server-rendered and statically generated applications.
+- **TypeScript:** A typed superset of JavaScript for enhanced code quality and maintainability.
+- **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
+- **Lucide React:** A library of beautiful and consistent icons.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Pages & Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Upload New Deal Page:** A page to create and upload new deal information.
+- **Deal Overview Page:** A page to view a summary and details of existing deals.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How to Run the Project
 
-## Learn More
+Follow these steps to run the Starboard AI frontend assessment project locally:
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Clone the Repository:** If you haven't already, clone the project repository to your local machine using Git:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    git clone <repository_url_here>
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2.  **Install Dependencies:** Navigate to the project directory in your terminal and install the required dependencies using Yarn:
 
-## Deploy on Vercel
+    ```bash
+    cd <project_directory_name>
+    yarn install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3.  **Start the Development Server:** Once the dependencies are installed, you can start the Next.js development server by running the following command:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    yarn dev
+    ```
+
+4.  **Open in Your Browser:** Open your web browser and navigate to the address provided in the terminal (usually http://localhost:3000/). You should now see the Starboard AI frontend assessment application running in your browser.
